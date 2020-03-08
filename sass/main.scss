@@ -1,0 +1,172 @@
+@import 'mediaqueries';
+
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    @include smallMobile(){padding: 10px;}
+
+    nav{
+        box-shadow: 1px 1px 2px rgba(111, 111, 116, 0.5);
+        padding: 5px !important;
+
+        a{
+            margin-right: 1em;
+        }
+
+        a:hover{
+            text-decoration: none;  
+        }    
+    }
+
+
+    #topBtn{
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        background-color: rgba(163, 45, 128, 0.7);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    #topBtn:hover{
+        background-color: rgba(163, 45, 128, 1);
+    }
+
+
+    .search{
+        text-align: center;
+        font-family: 'Gotu', sans-serif;
+        margin-top: 10px;
+
+        input{
+            @include smallMobile(){width: 100px;}   
+        }
+
+        #s-btn{
+            background-color: rgb(163, 45, 128);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+            height: 30px;
+
+            @include smallMobile(){font-size: 14px;}
+        }
+        p{
+            margin: 5px;
+        }
+    }
+
+
+    .result-col{
+
+        min-height: 90vh;
+
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+        margin: 20px auto;
+
+        .mv {
+            width: 220px;
+            height: 410px;
+            margin: 0 13px 26px;
+            border: 1px solid rgba(111, 111, 116, 0.3);
+            background-color: rgba(255, 255, 255, 0.3);
+            
+            @include smallMobile(){height: auto}
+
+
+            .img-container {
+                margin: 20px auto 0 auto;
+                width: 80%;
+                height: 300px;
+                
+                
+                @include smallMobile(){
+                    height: auto;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+            
+            }
+
+
+            .text {
+                width: 80%;
+                height: 90px;
+                margin: 0 auto;
+                font-size: 14px;
+                padding: 5px;
+                position: relative;
+                overflow: hidden;
+                
+                @include smallMobile(){height: auto}
+
+                p {
+                    min-height: 35px;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+                .trash, .heart {
+                    display: inline-block;
+                    font-size: 25px;
+                    //color: rgb(219, 85, 85);
+                    position: absolute;
+                    right: 0px;
+                    bottom: 15px;
+                    transition: font-size 0.3s linear;
+                    @include smallMobile(){font-size: 20px;}
+                }
+                .trash:hover, .heart:hover{
+                    cursor: pointer;
+                }
+                .trash:active, .heart:active{
+                    cursor: pointer;
+                    font-size: 28px;
+                    @include smallMobile(){font-size: 23px;}
+                }
+            }
+        }
+        .mv:hover{
+            border: 1px solid rgba(111, 111, 116, 1);
+        }
+    }
+    
+
+    #section2{
+
+        .favorites-header{
+            text-align: center;
+            font-family: 'Gotu', sans-serif;
+            background-color: rgb(248, 249, 250);
+            padding: 10px;
+            margin-top: 18px;
+            margin-bottom: 60px;
+            box-shadow: 1px 1px 2px rgba(111, 111, 116, 0.5);
+        }
+        .favorites{
+            min-height: 91vh;
+        }
+    }
+}

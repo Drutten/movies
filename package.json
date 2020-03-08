@@ -1,0 +1,17 @@
+{
+  "name": "ts2-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -W"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.2",
+    "typescript": "^3.7.5"
+  }
+}

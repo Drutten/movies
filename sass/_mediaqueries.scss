@@ -1,0 +1,3 @@
+@mixin smallMobile(){
+    @media (max-width: 370px){@content}
+}
